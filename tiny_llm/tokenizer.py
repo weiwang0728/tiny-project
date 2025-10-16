@@ -5,7 +5,7 @@ from typing import List
 
 TOKENIZER_MODEL = './data/tok4096.model'
 
-class Tokenzier:
+class Tokenizer:
     def __init__(self, model_path=None):
         model_path = model_path if model_path  else TOKENIZER_MODEL
         assert os.path.isfile(model_path)
