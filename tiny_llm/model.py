@@ -140,8 +140,6 @@ class Attention(nn.Module):
         # 根据是否指定n_kv_heads，确定用于键（key）和值（value）的头的数量。
         self.n_kv_heads = args.n_heads if args.n_kv_heads is None else args.n_kv_heads
         # 确保总头数可以被键值头数整除。
-        print(args.n_heads)
-        print(self.n_kv_heads)
         assert args.n_heads % self.n_kv_heads == 0
 
         # 模型并行处理大小，默认为1。
